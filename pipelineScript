@@ -4,8 +4,16 @@
     }
  }
  
-stage('Print README.md') {
+stage('List contents located at root of the Git Repository') {
     node {
-        sh label: '', script: 'cat README.md'
+        sh label: '', script: 'ls'
+    }
+}
+
+stage('Send e-mail') {
+    node {
+        sh label: '', script: 'echo \'Sending e-mail...\''
+        sh label: '', script: 'delay(10000)'
+        sh label: '', script: 'echo \'E-mail sent\' '
     }
 }
