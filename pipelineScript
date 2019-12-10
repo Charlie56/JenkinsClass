@@ -13,7 +13,7 @@ stage('List contents located at root of the Git Repository') {
 stage('Send e-mail') {
     node {
         sh label: '', script: 'echo \'Sending e-mail...\''
-        sh label: '', script: 'delay(10000)'
+        sh label: '', script: 'sleep 10s'
         sh label: '', script: 'echo \'E-mail sent\' '
     }
 }
