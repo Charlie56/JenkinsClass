@@ -1,0 +1,11 @@
+ stage('Clone Repository') {
+   node {
+        git 'https://github.com/Charlie56/JenkinsClass.git'   
+    }
+ }
+ 
+stage('Print README.md') {
+    node {
+        sh label: '', script: 'cat README.md'
+    }
+}
